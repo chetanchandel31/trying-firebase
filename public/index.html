@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     	https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyCMDCzgDqffTgDnHOmxqyYNru2RhvfjlDg",
+				authDomain: "first-firebase-project-7c70d.firebaseapp.com",
+				projectId: "first-firebase-project-7c70d",
+				storageBucket: "first-firebase-project-7c70d.appspot.com",
+				messagingSenderId: "150056959458",
+				appId: "1:150056959458:web:69e30c707179c79a740dbb",
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+		</script>
+		<title>Trying firebase</title>
+	</head>
+
+	<body>
+		<!-- part 1: auth -->
+
+		<h1>Our user:</h1>
+
+		<div id="userDetailsContainer">
+			<!-- code from js comes here -->
+		</div>
+
+		<button class="signIn">Sign in</button>
+		<button class="signOut">Sign out</button>
+		<hr />
+		<img src="" alt="" />
+
+		<!-- part 2: firestore -->
+		<h1>Random items list</h1>
+		<ul id="items">
+			<!-- code from js comes here -->
+		</ul>
+		<button id="createItems">create item</button>
+
+		<script src="./app.js" type="module" defer></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"
+			integrity="sha512-/seDHxVfh1NvFUscAj8GsHQVZJvr2jjAoYsNL7As2FCaFHUHYIarl3sRCvVlFgyouVNiRgHIebyLKjpgd1SLDw=="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			var randomName = faker.name.findName(); // Caitlyn Kerluke
+			var randomEmail = faker.internet.email(); // Rusty@arne.info
+			var randomCard = faker.helpers.createCard(); // random contact card containing many properties
+			console.log(randomName, randomEmail, randomCard);
+		</script>
+	</body>
+</html>
